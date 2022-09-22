@@ -1,6 +1,6 @@
 const Employee = require('../lib/Employee');
 
-test('Create new employee', () => {
+test('Create new Employee', () => {
     const employee = new Employee('Trae Valdez', 1234, 'trae@traemail.com');
 
     expect(employee.name).toBe("Trae Valdez");
@@ -8,7 +8,7 @@ test('Create new employee', () => {
     expect(employee.email).toEqual(expect.any(String));
 });
 
-test('Check for employee class', () => {
+test('Check for Employee class', () => {
     const employee = new Employee('Trae Valdez', 1234, 'trae@traemail.com');
 
     expect(employee.getName()).toBe(employee.name);

@@ -1,6 +1,6 @@
-const Employee = require('../lib/Engineer');
+const { Engineer } = require('../lib/Engineer');
 
-test('Create new engineer', () => {
+test('Create new Engineer', () => {
     const employee = new Engineer('Trae Valdez', 1234, 'trae@traemail.com', 'traevaldez');
 
     expect(employee.name).toBe("Trae Valdez");
@@ -9,7 +9,7 @@ test('Create new engineer', () => {
     expect(employee.github).toEqual(expect.any(String));
 });
 
-test('Check for engineer class', () => {
+test('Check for Engineer class', () => {
     const employee = new Engineer('Trae Valdez', 1234, 'trae@traemail.com', 'traevaldez');
 
     expect(employee.getName()).toBe(employee.name);

@@ -1,6 +1,6 @@
-const Employee = require('../lib/Manager');
+const { Manager } = require('../lib/Manager');
 
-test('Create new manager', () => {
+test('Create new Manager', () => {
     const employee = new Manager('Trae Valdez', 1234, 'trae@traemail.com', 5555551234);
 
     expect(employee.name).toBe("Trae Valdez");
@@ -9,8 +9,8 @@ test('Create new manager', () => {
     expect(employee.officeNumber).toEqual(expect.any(Number));
 });
 
-test('Check for manager class', () => {
-    const employee = new Intern('Trae Valdez', 1234, 'trae@traemail.com', 5555551234);
+test('Check for Manager class', () => {
+    const employee = new Manager('Trae Valdez', 1234, 'trae@traemail.com', 5555551234);
 
     expect(employee.getName()).toBe(employee.name);
     expect(employee.getId()).toBe(employee.id);

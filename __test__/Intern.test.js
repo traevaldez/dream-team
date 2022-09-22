@@ -1,6 +1,6 @@
-const Employee = require('../lib/Intern');
+const { Intern } = require('../lib/Intern');
 
-test('Create new intern', () => {
+test('Create new Intern', () => {
     const employee = new Intern('Trae Valdez', 1234, 'trae@traemail.com', 'UTPA');
 
     expect(employee.name).toBe("Trae Valdez");
@@ -9,7 +9,7 @@ test('Create new intern', () => {
     expect(employee.school).toEqual(expect.any(String));
 });
 
-test('Check for intern class', () => {
+test('Check for Intern class', () => {
     const employee = new Intern('Trae Valdez', 1234, 'trae@traemail.com', 'UTPA');
 
     expect(employee.getEmployeeName()).toBe(employee.name);
