@@ -13,8 +13,8 @@ const init = () => { managerQuestions() }
 
 // manager questions
 const managerQuestions = () => {
-    inquirer.createPromptModule(managerQuestionsArr)
-    .then (( answers ) => {
+    inquirer.prompt(managerQuestionsArr)
+    .then(( answers ) => {
         answers = new Manager(answers.name, answers.id, answers.email, answers.officeNumber)
         employeesArr.push(answers);
         return employeePrompt();
@@ -23,17 +23,18 @@ const managerQuestions = () => {
 
 // engineer questions
 const engineerQuestions = () => {
-    inquirer.createPromptModule(engineerQuestionsArr)
-    .then (( answers ) => {
+    inquirer.prompt(engineerQuestionsArr)
+    .then(( answers ) => {
         answers = new Engineer(answers.name, answers.id, answers.email, answers.github)
         employeesArr.push(answers);
         return employeePrompt();
     })
 };
 
+// intern questions
 const internQuestions = () => {
-    inquirer.createPromptModule(internQuestionsArr)
-    .then (( answers ) => {
+    inquirer.prompt(internQuestionsArr)
+    .then(( answers ) => {
         answers = new Intern(answers.name, answers.id, answers.email, answers.school)
         employeesArr.push(answers);
         return employeePrompt();
@@ -41,7 +42,7 @@ const internQuestions = () => {
 };
 
 const employeePrompt = () => {
-    inquirer.createPromptModule([{
+    inquirer.prompt([{
         type: 'list',
         name: 'employeeTitle',
         message: 'What kind of team member would you like to add?',
